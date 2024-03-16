@@ -1,0 +1,35 @@
+---
+import "../styles/index.css";
+
+import Layout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Template">
+  <section >
+    <div class="container max-w-full">
+      <!-- Only For Template -->
+      <div class="flex flex-col border-2 border-red-500 p-4 gap-2 relative ">
+        <h1 class="">Iam the main heading</h1>
+        <h2>Im the sub heading</h2>
+        <h3>I'm the sub sub heading</h3>
+        <h4>No one asks about me, the H4 🥲</h4>
+        <h5>Are you sure bro,its H5 🥲</h5>
+        <h6>People talk about you guys?</h6>
+
+        <p>Paragraphs are the best</p>
+
+        <span class="">Iam Spaann</span>
+
+        <div class="flex space-x-6 ">
+          <Button href="/fsd">Primary Button</Button>
+          <Button variant="secondary">Nav Button</Button>
+        </div>
+
+		<div class="">
+			
+		</div>
+      </div>
+    </div>
+  </section>
+</Layout>

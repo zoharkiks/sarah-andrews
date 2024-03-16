@@ -1,0 +1,35 @@
+---
+import { cva } from "class-variance-authority";
+const button = cva(
+  "py-0 text-textLight  rounded-[var(--border-radius)] inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 w-max px-[calc(var(--copy-size-m)*1.33)] h-[var(--btn-height)]   ",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary      ",
+        secondary: "bg-secondary  ",
+        tertiary: "",
+      },
+      size: {
+        default: "",
+        small: "",
+        medium: "",
+      },
+    },
+
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+const { variant, size, class: className, href } = Astro.props;
+---
+
+<button class={button({ variant, size, className })}>
+  <a href={href}>
+    <span class="text-lg">
+      <slot />
+    </span>
+  </a>
+</button>

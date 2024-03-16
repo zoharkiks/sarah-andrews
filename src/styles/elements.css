@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Section Colors */
+
+[data-bg-section="dark"] {
+  background-color: var(--color-dark);
+}
+
+[data-bg-section="lightgray"] {
+  background-color: var(--color-lightgray);
+}
+
+.container.medium {
+  max-width: calc(var(--title-size) * 9);
+}
+
+.container.small {
+  max-width: calc(var(--title-size) * 7.75);
+}
+
+.container.full {
+  max-width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@layer components {
+  /* ------------------------- Section -------------------------------------------------- */
+
+  section {
+    @apply relative pt-[var(--section-padding)] pb-[var(--section-padding)];
+  }
+
+  /* ------------------------- Container -------------------------------------------------- */
+
+  .container {
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    max-width: calc(var(--title-size) * 11);
+  }
+
+  /* ------------------------- Navigation -------------------------------------------------- */
+  .main-nav-bar {
+    @apply top-0 fixed left-0 w-full p-[calc(var(--gap)*0.1)var(--container-padding)]
+    pointer-events-auto flex items-center   transition-[padding(var(--animation-nav))]
+     z-[1000] ;
+  }
+}
+
+@layer utilities {
+  /* Overlay */
+  .overlay {
+    @apply absolute top-0 left-0 h-full w-full;
+  }
+
+  .overlay.overlay-dark {
+    @apply bg-[rgba(var(--color-black-rgb),0.5)];
+  }
+
+  .glassmorphism {
+    background: rgba(199, 199, 199, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}

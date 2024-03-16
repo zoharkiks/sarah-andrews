@@ -1,0 +1,23 @@
+---
+import Button from "./Button.astro";
+---
+
+<header class="">
+  <nav class="main-nav-bar bg-[var(--color-secondary)] text-[var(--color-light)]">
+    <div
+      class="flex justify-between items-center p-[calc(var(--gap)*0.6)0] w-full "
+    >
+      <!-- Logo -->
+      <span>Logo</span>
+
+      <!-- Links -->
+      <div class="flex space-x-4">
+        <a href="/"><span>Home</span></a>
+        <a href="/"><span>About</span></a>
+        <a href="/"><span>Contact Us</span></a>
+      </div>
+
+      <Button>CTA</Button>
+    </div>
+  </nav>
+</header>
